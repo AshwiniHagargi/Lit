@@ -1,0 +1,124 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator-Dashboard</title>
+    <script type="module" src="./index.js"></script>
+    
+    <link rel="shortcut icon" href="./favion/favicon-32x32.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/c43a23375d.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+</head>
+<body>
+    <my-component></my-component>
+</body>
+</html>  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator-Dashboard</title>
+    <link rel="shortcut icon" href="./favion/favicon-32x32.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/c43a23375d.js" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo"><img id="" src="../imgs/header_logo.png" alt=""></div>
+        <div class="nav-mid">Operator Screen</div>
+        <div class="log-out-div">
+            <div class="userInfo" id="userInfo">
+                <p class="signedInAs">Signed in as</p>
+                <p id="userName"></p>
+                <p id="userEmail"></p>
+            </div>
+            <div class="logOutBtn">
+                <button id="log-out"><i class="fa-solid fa-right-from-bracket"></i> Log out</button>
+            </div>
+
+        </div>
+    </nav>
+    <div class="container">
+
+        <div class="chatRequestDiv">
+            <div class="nwReqHeading">
+                <p>New Chat Request</p>
+            </div>
+            <div class="newReqest">
+                <ul id="reList" class="scrollable-list">
+                    <!-- <li>No chat request</li> -->
+                </ul>
+            </div>
+
+
+        </div>
+
+        <div class="chat">
+            <div class="chat-box" id="chat-box">
+            </div>
+
+            <form action="" id="inputMessege" class="inputForm">
+                <div class="inputGroup">
+                    <div class="autocomplete">
+                        <input type="text" id="message" placeholder="Message." required autocomplete="off">
+                    </div>
+                    <!-- <textarea id="message"  placeholder="Message." required autocomplete="off"></textarea> -->
+                    <div style="display: flex;align-items: center;justify-content: center;">
+                        <input type="file" id="uploadImg" accept="image/*" style="display: none;" />
+                        <label for="uploadImg" class="uploadImgLable"><i class="fas fa-camera fa-2x"></i> </label>
+                        <img id="image-preview" src="#" alt="Preview"
+                            style="display: none; width: 30%; height: auto;" />
+                        <span class="closeImgPreview" id="closeImgPreview">&times;</span>
+                        <button id="send" type="submit"><i class="fa-regular fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+        <div class="rightDiv">
+            <div class="cmHistory">
+                <div class="cmDetailsHead">
+                    <p>Customer Details</p>
+                </div>
+                <div class="cmDetails">
+                    <div id="customerDetailsDiv" class="customerDetailsDiv">
+                        <p id="customerName">You are not connected to any customer.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="suggestionBox">
+                <div style="width: 100%;">
+                    <div class="suggestionHeader">
+                        <p>Quick chat</p>
+                        <i class="fa-solid fa-plus" id="addSuggestionBtn"></i>
+                    </div>
+                    <div class="suggestionListDiv">
+                        <ul id="suggestionList">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="endBtn-div">
+                <button id="endChat-btn"><i class="fa-solid fa-comment-slash"></i> End Chat</button>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="/staff/js/firebase-config.js" ></script> -->
+    <script type="module" src="./indexx.js"></script>
+
+</body>
+
+</html>

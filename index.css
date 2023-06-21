@@ -1,0 +1,602 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10% 0px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: rgb(241, 237, 237);
+}
+
+.logo {
+  width: 20%;
+}
+
+.logo img {
+  width: 60%;
+}
+
+.log-out-div {
+  width: 20%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.logOutBtn button {
+  /* padding: 5px; */
+  width: 120px;
+  height: 50px;
+  font-size: 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(211, 211, 211);
+  transition: 0.2s;
+}
+
+.logOutBtn button:hover {
+  /* background-color: rgb(166, 168, 169); */
+  background-color: rgb(225, 58, 58);
+  color: white;
+}
+
+.fa-right-from-bracket {
+  margin-right: 6px;
+}
+
+.nav-mid {
+  width: 60%;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #4b4a4a;
+}
+
+.container {
+  margin-top: 20px;
+  padding: 0px 5% 0px;
+  /* background-color: antiquewhite; */
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cmHistory {
+  /* width: 25%; */
+  height: 34vh;
+  background-color: rgb(234, 234, 234);
+}
+
+.chat {
+  width: 45%;
+  height: 80vh;
+  /* background-color: rgb(251, 249, 249); */
+}
+
+.chat-box {
+  border: 1px solid #ccc;
+  padding: 16px;
+  height: 70vh;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+}
+
+.message {
+  margin-bottom: 2px;
+  word-wrap: break-word;
+}
+
+.chatRequestDiv {
+  width: 25%;
+  height: 80vh;
+  background-color: rgb(224, 224, 224);
+
+}
+
+.newReqest {
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.nwReqHeading {
+  text-align: center;
+  background-color: #b6b0b0;
+}
+
+.nwReqHeading p {
+  font-size: 25px;
+  padding: 20px;
+  color: #4b4949;
+  font-weight: bold;
+}
+
+.newReqest #reList {
+  list-style: none;
+  /* background-color: rgb(255, 217, 156 */
+  padding: 20px;
+  width: 100%;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.newReqest #reList li {
+  /* background-color: rgb(193, 224, 57); */
+  background-color: #68d66b;
+  padding: 10px;
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+#reList label {
+  margin: 5px;
+}
+
+.scrollable-list {
+  max-height: 65vh;
+  overflow-y: scroll;
+  /* Enable vertical scrolling */
+}
+
+.scrollable-list li {
+  display: block;
+  /* Display list items as block elements */
+  padding: 5px;
+  /* Add some padding for spacing */
+}
+
+.inputGroup {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.inputGroup #message {
+  flex: 1;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  outline: none;
+  width: 96%;
+}
+
+.inputGroup button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+  width: 100px;
+  margin-left: 5px;
+}
+
+/* chat request notification */
+.notification-item {
+  overflow: hidden;
+  white-space: nowrap;
+  /* text-overflow: ellipsis; */
+  background-color: #f8f8f8;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: transform 0.3s ease-in-out;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.notification-item:hover {
+  transform: translateY(-2px);
+}
+
+.notification-item div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.notification-item label {
+  font-weight: bold;
+  margin-right: 5px;
+  color: #555;
+}
+
+.notification-item span {
+  display: inline-block;
+  margin-right: 5px;
+  color: #333;
+}
+
+.notification-item span:last-child {
+  margin-right: 0;
+}
+
+/* customer details */
+.cmDetails {
+  height: 80%;
+}
+
+.cmDetailsHead {
+  text-align: center;
+  background-color: #b6b0b0;
+}
+
+.cmDetailsHead p {
+  font-size: 25px;
+  padding: 20px;
+  color: #4b4949;
+  font-weight: bold;
+}
+
+.cmDetails div {
+  text-align: center;
+  padding: 10px;
+  margin: 20px;
+  background-color: #ccc;
+  text-align: center;
+}
+
+.customerDetailsDiv {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden; 
+  /* text-overflow: ellipsis;  */
+  white-space: nowrap
+}
+
+.customerDetailsDiv p {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 10px;
+}
+
+.endBtn-div button {
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 20px;
+  background-color: rgb(225, 58, 58);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  color: rgb(255, 255, 255);
+}
+
+.endBtn-div button:hover {
+  transform: translate(2px);
+}
+
+.endBtn-div {
+  background-color: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* userInfo */
+.userInfo {
+  margin: 20px;
+  background-color: #e1dbdb;
+  padding: 12px;
+}
+
+.signedInAs {
+  font-size: 20px;
+  color: rgb(106, 104, 104);
+}
+
+/* messegs */
+.message {
+  /* border: 1px solid rgb(232, 227, 227);
+  padding: 10px 8px; */
+  border-radius: 10px;
+  /* background-color: #faf8f846; */
+  font-size: 20px;
+}
+
+.nmMsgTm {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  /* text-align: justify; */
+}
+
+.senderName {
+  font-weight: 400;
+  font-size: 16px;
+  text-align: justify;
+  width: 88%;
+
+}
+
+.textMessage {
+  font-weight: 500;
+  font-size: 18px;
+  text-align: justify
+}
+
+.timeStamp {
+  /* font-weight: 600; */
+  font-size: 12px;
+  /* width: 100px; */
+  text-align: end;
+}
+
+.msgNtm {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-paper-plane {
+  font-size: 25px;
+}
+
+.fa-comment-slash {
+  margin-right: 10px;
+}
+
+/* anubhav's message display code */
+.message .time {
+  font-size: 16px;
+}
+
+.message .msgName {
+  font-weight: normal;
+  font-size: 18px;
+}
+
+.message .senderName {
+  font-weight: bold;
+}
+
+/* displying customer sent img */
+.imgDisplayDiv {
+  padding: 30px;
+}
+
+.customerImg {
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+/* warning message */
+.custom-modal {
+  font-size: 20px;
+  position: fixed;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f89494;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  z-index: 9999;
+}
+
+/* priview upload img */
+.uploadImgLable {
+  display: flex;
+  margin-left: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+/* close img Preview */
+.closeImgPreview {
+  background-color: rgba(255, 255, 255, 0.849);
+  /* border-radius: 100%; */
+  padding: 0px 5px;
+  color: #aaa;
+  position: relative;
+  top: -4px;
+  right: 40px;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  display: none;
+}
+
+.closeImgPreview:hover,
+.closeImgPreview:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* CSS styling for the autocomplete suggestion */
+.autocomplete {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+}
+
+.autocomplete-items {
+  /* position: absolute; */
+  border: 1px solid #d4d4d4;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+
+}
+
+.autocomplete-item {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #f1f1f1;
+
+}
+
+.autocomplete-item:hover,
+.autocomplete-item.selected {
+  background-color: #dad5d5;
+}
+
+/* suggestion list */
+.rightDiv{
+ width: 25%
+}
+
+.endBtn-div {
+  height: 7vh;
+}
+
+#suggestionList {
+  list-style: none;
+}
+
+.suggestionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background-color: #ccc;
+}
+
+.suggestionHeader p {
+  font-size: 30px;
+  /* text-align: center; */
+  width: 100%;
+}
+
+.suggestionListDiv {
+  background-color: #e3e3e3;
+  padding: 10px;
+  height: 30vh;
+  overflow-y: scroll
+}
+
+.suggestionListDiv ul li {
+  cursor: pointer;
+  background-color: #f9f8f8;
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+
+.suggestionListDiv ul li:hover {
+  background-color: #f9f9f9;
+}
+.fa-plus{
+  font-size: 25px;
+  color: #515050;
+  cursor: pointer;
+  font-weight: lighter;
+}
+.fa-plus:hover{
+  color: black;
+}
+
+/* suggestion popup form */
+.addQuick-msg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.quickMsg-form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+}
+
+.quickMsg-textarea {
+  width: 90%;
+  height: 150px;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  resize: none;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+}
+
+.quickMsg-submit-btn,
+.quickMsg-cancel-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quickMsg-submit-btn {
+  background-color: #4CAF50;
+  color: #ffffff;
+  margin-right: 30px;
+}
+
+.quickMsg-cancel-btn {
+  background-color: #cccccc;
+  color: #ffffff;
+  margin-left: 10px;
+}
+
+.quickMsg-submit-btn:hover{
+ background-color: #45a049;
+}
+.quickMsg-cancel-btn:hover {
+  background-color: #ff5c5c;
+}
+.quickChat-success-message {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #4CAF50;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+.newQuickChatLi{
+  display: flex;
+  justify-content: space-between;
+}
+.newQuickChatLi i{
+  color: #c1bebe;
+  font-size: 18px;
+}
+.newQuickChatLi i:hover{
+  color: #515050;
+}
+.fa-trash-can{
+  margin: 0px 4px;
+}
+.quickChat-contant{
+  text-align: justify;
+}
